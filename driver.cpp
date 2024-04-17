@@ -1,3 +1,8 @@
+/*
+Samuel Snowden
+CIS1202.501
+04/21/2024
+*/
 
 #include <iostream>
 #include "car.h"
@@ -5,26 +10,43 @@
 #include "Vehicle.h"
 
 int main() {
-    // Create an instance of Vehicle
-    Vehicle vehicle("Integra", 1998);
+    std::string manufacturer;
+    int yearBuilt;
 
-    // Display information about the vehicle
+    std::cout << "Enter manufacturer of the vehicle: ";
+    std::cin >> manufacturer;
+    std::cout << "Enter year built of the vehicle: ";
+    std::cin >> yearBuilt;
+
+    Vehicle vehicle(manufacturer, yearBuilt);
+    std::cout << "\nVehicle Information:" << std::endl;
     vehicle.displayInfo();
 
-    Car car("Toyota", 2022, 4);
-    car.setManufacturer("Honda"); 
-    car.setYearBuilt(2023); 
-    car.setNumDoors(2); 
+    int numDoors;
 
-    
-    Truck truck("Ford", 2021, 5.5);
-    truck.setTowingCapacity(7.5); 
+    std::cout << "\nEnter manufacturer of the car: ";
+    std::cin >> manufacturer;
+    std::cout << "Enter year built of the car: ";
+    std::cin >> yearBuilt;
+    std::cout << "Enter number of doors of the car: ";
+    std::cin >> numDoors;
 
-    std::cout << "Car Information:" << std::endl;
+    Car car(manufacturer, yearBuilt, numDoors);
+    std::cout << "\nCar Information:" << std::endl;
     car.displayInfo();
-    std::cout << std::endl;
 
-    std::cout << "Truck Information:" << std::endl;
+    double towingCapacity;
+
+    std::cout << "\nEnter manufacturer of the truck: ";
+    std::cin >> manufacturer;
+    std::cout << "Enter year built of the truck: ";
+    std::cin >> yearBuilt;
+    std::cout << "Enter towing capacity of the truck (in tons): ";
+    std::cin >> towingCapacity;
+
+    Truck truck(manufacturer, yearBuilt, towingCapacity);
+    std::cout << "\nTruck Information:" << std::endl;
     truck.displayInfo();
+
     return 0;
 }
