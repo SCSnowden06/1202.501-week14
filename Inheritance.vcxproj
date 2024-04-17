@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClCompile Include="car.cpp" />
     <ClCompile Include="driver.cpp" />
+    <ClCompile Include="truck.cpp" />
     <ClCompile Include="vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="car.h" />
+    <ClInclude Include="truck.h" />
     <ClInclude Include="vehicle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
